@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+:root{
+  --random-x : 10px;
+  --random-y : 10px;
+}
+.wrapper{
+  background: #bc4e9c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #bc4e9c, #f80759); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #bc4e9c, #f80759); ;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#mobile-overlay{
+  position: fixed;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background: #bc4e9c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #bc4e9c, #f80759); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #bc4e9c, #f80759); ;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  flex-direction: column;
+  padding: 40px;
+}
+*{
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Salsa", cursive;
+}
+.content-box{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+.text-white{
+  color : white;
+
+}
+.please,.yayy,.surprise{
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+  margin: 50px 0px;
+}
+.please-text{
+
+}
+.text-center{
+  text-align: center;
+}
+.btn-row {
+  display: flex;
+  margin-top: 50px;
+}
+.btn-row button{
+  /* flex: 1; */
+  margin: 5px 20px;
+  background: white;
+  color: black;
+  border: 0;
+  padding: 10px 50px;
+  border-radius: 30px;
+  transition: .5s all;
+  position: relative;
+  bottom : 0;
+  right: 0;
+  cursor: pointer;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+}
+button:focus{
+  outline: 10px solid rgba(255, 255, 255, 0.647);
+}
+.btn-no {
+  transition: .5s all;
+}
+.d-none{
+  display: none !important;
+}
+.text-red{
+  color: #f80759;
+}
+.name-tag{
+  font-size: 17px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  margin: auto;
+  padding: 5px 40px;
+  display: flex;
+  z-index: 100;
+  align-items: center;
+  background: white;
+  border-radius: 10px 10px 0px 0px;
+}
+.name-tag img{
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+a{
+  text-decoration: none;
+}

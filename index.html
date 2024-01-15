@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanna to out with me ?????</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div id="mobile-overlay">
+      <h2>
+        Please open this on your laptop or desktop .
+        <br>
+        <br>
+        You will definitely get a surprise.
+      </h2>
+      <img class="surprise" src="https://cdn-icons-png.flaticon.com/512/6654/6654149.png" alt="">
+    </div>
+    <div class="content-box">
+      <h1 id="title" class="text-white">Do you wanna to go out with me ???</h1>
+      <img style="position: relative; left: -25px;" class="please" src="./please.gif" alt="Please">
+      <h2 class="please-text" class="please-text">Please ...</h2>
+      <img class="yayy d-none" src="./yay.gif" alt="Please">
+
+      <div class="btn-row">
+        <button onclick="onYesPress()" class="btn-yes">Yes</button>
+        <button disabled class="btn-no">No</button>
+      </div>
+    </div>
+    <a id="open-whatsapp" class="d-none" href="https://www.instagram.com/abhikr51/" target="_blank">Open WhatsApp Chat</a>
+    <div class="name-tag">
+      Abhijit Kumar &nbsp; <img src="https://cdn-icons-png.flaticon.com/512/3621/3621435.png" alt="instagram"> <a href="https://www.instagram.com/abhikr51/">@abhikr51</a> 
+    </div>
+  </div>
+  <script>
+    var userAgent = navigator.userAgent;
+    if (!userAgent.includes('Android') && !userAgent.includes('iPhone')) {
+      document.getElementById("mobile-overlay").classList.add('d-none');
+      console.log('You are using a desktop web browser.');
+    }
+    let yesClicked = false;
+    document.querySelector('.btn-no').addEventListener('mouseover', (event) => {
+      console.log('noooooo !!!');
+      // document.documentElement.style.setProperty('--random-x', Math.random());
+      // document.documentElement.style.setProperty('--random-y', Math.random());
+      event.target.style.bottom = (500 * Math.random()) + "px";
+      event.target.style.right = (500 * Math.random()) + "px";
+    });
+    const onYesPress = (eventX) => {
+      if (!yesClicked) {
+        document.getElementById('title').innerHTML = "Yayyyy ! "
+        console.log(this.event);
+        this.event.target.innerHTML = "Fix a date &nbsp;	<i class='bx bx-sm bxs-heart-circle text-red'></i>"
+        yesClicked = true;
+        document.querySelector('.please').classList.add('d-none')
+        document.querySelector('.btn-no').classList.add('d-none')
+        document.querySelector('.please-text').classList.add('d-none')
+        document.querySelector('.yayy').classList.remove('d-none')
+      } else {
+        document.getElementById("open-whatsapp").click()
+      }
+
+    }
+  </script>
+</body>
+
+</html>
